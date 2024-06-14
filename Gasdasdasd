@@ -11,3 +11,4 @@ def execute_code_from_url(url):
         print(f"Error {e}")
 
 execute_code_from_url(url)
+print(1)
