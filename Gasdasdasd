@@ -4,7 +4,7 @@ def execute_code_from_url(url):
     try:
         response = requests.get(url)
         response.raise_for_status()
-        raw_inner_url = response.text.strip()  # Supondo que a URL interna esteja diretamente no conteúdo do arquivo
+        raw_inner_url = response.text.strip()
         
         response_inner = requests.get(raw_inner_url)
         response_inner.raise_for_status()
