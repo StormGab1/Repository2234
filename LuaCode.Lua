@@ -1,4 +1,3 @@
--- Variáveis principais e objetos de jogo
 local Event = game.ReplicatedStorage:FindFirstChild("Aceitar")
 local Corrida = workspace:FindFirstChild("Corrida")
 local Folder = game.ReplicatedStorage:FindFirstChild("Ganhadores")
@@ -86,7 +85,7 @@ local function ganhadores()
 	end
 end
 
--- Função para verificar e anunciar os vencedores da corrida
+-- Função para verificar e anunciar os vencedores
 local function chamarwinners()
 	for _, player in pairs(script.Folder:GetChildren()) do
 		Number2 += 1
@@ -234,7 +233,7 @@ local function Update()
 	end)
 end
 
--- Função para iniciar a corrida
+
 local function IniciarCorrida()
 	RandomMap()
 	task.wait(0.5)
@@ -242,7 +241,7 @@ local function IniciarCorrida()
 	corrida()
 end
 
--- Loop infinito para reiniciar a corrida após um determinado tempo
+
 while true do
 	IniciarCorrida()
 	task.wait(80)
