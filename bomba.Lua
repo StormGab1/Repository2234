@@ -38,6 +38,7 @@ if pages.IsFinished then
 pages:AdvanceToNextPageAsync()
 end
 
+task.wait(0.1)
 end
 
 end
