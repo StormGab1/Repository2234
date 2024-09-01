@@ -1,4 +1,4 @@
-local name = "AIFODEPFVRRRR"
+local name = "AIFODEPFVRRRRRRRRRRRRRRRR"
 
 if game.ReplicatedStorage:FindFirstChild(name) then
 else
